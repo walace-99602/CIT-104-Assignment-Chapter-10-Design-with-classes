@@ -1,0 +1,42 @@
+
+"Assignment Chapter 10"
+
+"Program that creates classes for students, methods, and compares student objects. Randomizes a list of student names and then puts them into alphabetical order."
+
+import random #for shuffling students
+import student #library for student data
+
+
+
+#some commands for testing
+print(student.undergraduate2.major)      # Output: business
+print(student.undergraduate5.age)        # Output: 6273
+print(student.undergraduate3.question()) # Output: Jeff raises their hand
+print(student.undergraduate12)           # Output: Emmett, (Age: 22, Major: construction, Courses: MATH 101, FIT 101)
+
+
+# undergraduate objects into a list
+undergraduates = [
+    student.undergraduate1,
+    student.undergraduate2,
+    student.undergraduate3,
+    student.undergraduate4,
+    student.undergraduate7,
+    student.undergraduate10,
+    student.undergraduate11,
+    student.undergraduate12
+    ]
+
+#shuffles list
+random.shuffle(undergraduates)
+print("shuffled order:")
+for u in undergraduates:
+    print(u)
+
+#sorts the list alphabetically
+undergraduates.sort()
+print("\nSorted order:")
+for u in undergraduates:
+    print(u)
+
+
